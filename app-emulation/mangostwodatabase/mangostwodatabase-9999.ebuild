@@ -10,7 +10,7 @@ EGIT_REPO_URI="https://github.com/mangostwo/database.git"
 DESCRIPTION="Database for Mangos Two Server"
 HOMEPAGE="https://www.getmangos.eu/"
 
-LICENSE="GPL-2.0"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 
