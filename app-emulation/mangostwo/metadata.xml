@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<use>
+		<flag name="bots">TODO: placeholder</flag>
+		<flag name="clang">Force building using installed clang (rather than the default CC/CXX)</flag>
+		<flag name="database">TODO: placeholder</flag>
+		<flag name="eluna">TODO: placeholder</flag>
+		<flag name="login">TODO: placeholder</flag>
+		<flag name="sd3">TODO: placeholder</flag>
+		<flag name="stormlib">TODO: placeholder</flag>
+		<flag name="tools">TODO: placeholder</flag>
+	</use>
+</pkgmetadata>
