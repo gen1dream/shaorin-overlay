@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<use>
+		<flag name="bots">TODO: its playerbots you can add to your world</flag>
+		<flag name="clang">Force building using installed clang (rather than the default CC/CXX)</flag>
+		<flag name="database">TODO: is the database</flag>
+		<flag name="eluna">TODO: its the lua scripting engine</flag>
+		<flag name="login">TODO: this is the authentication server for the realm</flag>
+		<flag name="sd3">TODO: is the scriptdev3 that prevides the world scripts</flag>
+		<flag name="stormlib">TODO: its the storm librery</flag>
+		<flag name="tools">TODO: its the extractor tools for maps vmaps dbc  mmaps</flag>
+	</use>
+</pkgmetadata>
