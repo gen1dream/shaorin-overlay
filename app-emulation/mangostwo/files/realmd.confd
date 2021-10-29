@@ -1,0 +1,7 @@
+# /etc/conf.d/mangosd: config file for /etc/init.d/mangosd
+
+# Location of the mangosd config
+REALMD_CONF="/opt/mangostwo/etc/realmd.conf"
+
+# mangos pid file
+REALMD_PID="/run/realmd.pid"

@@ -1,0 +1,15 @@
+[Unit]
+Description=Mangos TWO login server
+
+After=network.target
+Requires=network.target
+After=mariadb.service
+After=mysql.service
+
+[Service]
+Type=forking
+PIDFile=/run/realmd.pid
+User=mangos
+Group=mangos
+ExecStart=/opt/mangostwo/bin/realmd -c /opt/mangostwo/etc/realmd.conf -s run
+ExecStop=/opt/mangostwo/bin/realmd -c /opt/mangostwo/etc/realmd.conf -s stop

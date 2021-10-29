@@ -9,6 +9,7 @@
 		<flag name="login">TODO: this is the authentication server for the realm</flag>
 		<flag name="sd3">TODO: is the scriptdev3 that prevides the world scripts</flag>
 		<flag name="stormlib">TODO: its the storm librery</flag>
+		<flag name="system-libs">Use system libraries where possible</flag>
 		<flag name="tools">TODO: its the extractor tools for maps vmaps dbc  mmaps</flag>
 	</use>
 </pkgmetadata>
