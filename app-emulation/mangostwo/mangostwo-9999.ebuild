@@ -68,7 +68,7 @@ src_install() {
 	dosym "${EPREFIX}/opt/mangostwo/bin/mangosd" "${EPREFIX}/usr/bin/rmangosd-two"
 	dosym "${EPREFIX}/opt/mangostwo/bin/realmd" "${EPREFIX}/usr/bin/realmd-two"
 
-dobin magnosd
+dobin mangosd
 
 	einstalldocs
 
