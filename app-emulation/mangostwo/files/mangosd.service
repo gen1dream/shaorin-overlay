@@ -1,0 +1,15 @@
+[Unit]
+Description=Mangos TWO server
+
+After=network.target
+Requires=network.target
+After=mariadb.service
+After=mysql.service
+
+[Service]
+Type=forking
+PIDFile=/run/mangosd.pid
+User=mangos
+Group=mangos
+ExecStart=/opt/mangostwo/bin/mangosd -c /opt/mangostwo/etc/mangosd.conf -s run
+ExecStop=/opt/mangostwo/bin/mangosd -c /opt/mangostwo/etc/mangosd.conf -s stop

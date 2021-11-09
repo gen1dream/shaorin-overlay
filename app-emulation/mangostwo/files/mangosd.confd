@@ -1,0 +1,7 @@
+# /etc/conf.d/mangosd: config file for /etc/init.d/mangosd
+
+# Location of the mangosd config
+MANGOSD_CONF="/opt/mangostwo/etc/mangosd.conf"
+
+# mangos pid file
+MANGOSD_PID="/run/mangosd.pid"

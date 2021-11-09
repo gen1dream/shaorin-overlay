@@ -1,0 +1,28 @@
+#!/sbin/openrc-run
+# Copyright 1999-2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="realmd"
+description="Mangos TWO login server"
+command="/opt/mangostwo/bin/realmd"
+command_user="mangos:mangos"
+command_args="-c ${REALMD_CONF:=/etc/realmd.conf}"
+pidfile=${REALMD_PID:=/run/realmd.pid}
+
+depend() {
+	need net
+	use mariadb mysql
+	# Depending on mysql/mariadb?
+}
+
+start_pre() {
+	[[ -f ${REALMD_CONF} ]] || return 1
+}
+
+start() {
+	start-stop-daemon --start --exec ${command} --pidfile ${pidfile} --background -- ${command_args} -s run
+}
+
+stop() {
+	start-stop-daemon --stop --exec ${command} --pidfile ${pidfile} -- -s stop
+}

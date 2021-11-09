@@ -1,0 +1,28 @@
+#!/sbin/openrc-run
+# Copyright 1999-2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="mangosd"
+description="Mangos TWO server"
+command="/opt/mangostwo/bin/mangosd"
+command_user="mangos:mangos"
+command_args="-c ${MANGOSD_CONF:=/etc/mangosd.conf}"
+pidfile=${MANGOSD_PID:=/run/mangosd.pid}
+
+depend() {
+	need net
+	use mariadb mysql
+	# Depending on mysql/mariadb?
+}
+
+start_pre() {
+	[[ -f ${MANGOSD_CONF} ]] || return 1
+}
+
+start() {
+	start-stop-daemon --start --exec ${command} --pidfile ${pidfile} --background -- ${command_args} -s run
+}
+
+stop() {
+	start-stop-daemon --stop --exec ${command} --pidfile ${pidfile} -- -s stop
+}
